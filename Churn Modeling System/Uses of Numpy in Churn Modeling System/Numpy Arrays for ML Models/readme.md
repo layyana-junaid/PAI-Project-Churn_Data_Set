@@ -1,12 +1,10 @@
-1. Features and Labels (Independent and Dependent Variables)
+### 1. Features and Labels (Independent and Dependent Variables)
 In machine learning, we typically divide the dataset into:
-
 Features (X): The independent variables used to make predictions.
 Labels (y): The dependent variable, also known as the target, which we want to predict.
-Explanation of the Code:
-python
-Copy code
-# Features and labels (independent and dependent variables)
+##### Explanation of the Code:
+
+###### Features and labels (independent and dependent variables)
 X = df[['CreditScore', 'Age', 'Balance', 'EstimatedSalary']].values  # Features (NumPy array)
 y = df['Exited'].values  # Target variable (NumPy array)
 X = df[['CreditScore', 'Age', 'Balance', 'EstimatedSalary']].values:
