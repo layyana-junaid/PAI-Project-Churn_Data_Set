@@ -29,6 +29,7 @@
 #### The purpose of using visualizations like histograms, box plots, and correlation heatmaps is to gain deeper insights into the data and identify patterns and trends. Here are some specific graphs we will create and what insights they will provide:
 
 #### •	Distribution of Age and Churn: A overlapping bar graph will show how the customer’s age is distributed in the dataset. Overlaying the churn data will help us understand if churn is higher among younger or older customers.
+#### Insight: We might observe that churn is higher among younger customers, suggesting the need for targeted retention strategies for that age group.
 #### •	Correlation Heatmap: This heatmap will visualize the correlation between different features, highlighting which features (e.g., CreditScore, Balance) are most strongly associated with customer churn.
 #### Insight: We may find that customers with a low balance or poor credit score are more likely to churn, suggesting that financial health is a key predictor of churn.
 #### •	Boxplots of Balance vs Churn: A boxplot will help us compare the account balance distribution between customers who stayed and those who churned.
