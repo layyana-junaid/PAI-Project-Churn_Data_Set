@@ -1,4 +1,4 @@
-##### We will implement all the examples given below to properly understand the functionality of "Numpy Library": 
+### -We will implement all the examples given below to properly understand the functionality of "Numpy Library": 
 #### 1. Statistical Analysis
 #### While pandas has built-in methods for basic statistics, you can also use NumPy to calculate various statistics such as mean, median, variance, and standard deviation.
 #### Example: Calculating Mean, Median, Standard Deviation, and Variance
