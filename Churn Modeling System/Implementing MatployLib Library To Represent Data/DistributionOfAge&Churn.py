@@ -1,29 +1,23 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import seaborn as sns
 
-data = pd.read_csv(r"C:\Users\hp\Desktop\FAST\Semester 3\Programming for AI\PAIPROJECT\Churn_Modelling.csv")
-
-#dividing data in churned and not churned
-churned = data[data['Exited'] == 1]
-not_churned = data[data['Exited'] == 0]
-
+data = pd.read_csv(r"C:\Users\k230056\Desktop\23k0056\ab10\Churn_Modelling.csv")
+data['Churned'] = data['Exited'].map({0: 'Not Churned', 1: 'Churned'})
 plt.figure(figsize=(10, 6))
 
-bins = np.linspace(min(data['Age']), max(data['Age']), 20)  # 20 bins
+sns.histplot(data=data, x='Age', hue='Churned', bins=20, multiple='stack', 
+             palette=['#DDA0DD', '#9B59B6'], edgecolor='black')
+plt.title('Stacked Histogram of Age and Churn', fontsize=18, fontweight='bold', color='#5B2E91')
+plt.xlabel('Age', fontsize=14)
+plt.ylabel('Number of Customers', fontsize=14)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-# calculating values for churned and not churned customers
-churned_hist, _ = np.histogram(churned['Age'], bins=bins)
-not_churned_hist, _ = np.histogram(not_churned['Age'], bins=bins)
+legend_labels = ['Not Churned', 'Churned']
+legend_colors = ['#DDA0DD', '#9B59B6']
+handles = [plt.Line2D([0], [0], color=color, lw=5) for color in legend_colors]
+plt.legend(handles, legend_labels, title='Customer Status', title_fontsize='13', fontsize='12', loc='upper right')
 
-# plotting stacked bar chart
-plt.bar(bins[:-1], churned_hist, width=np.diff(bins), label='Churned', color='green', edgecolor='black')
-plt.bar(bins[:-1], not_churned_hist, width=np.diff(bins), bottom=churned_hist, label='Not Churned', color='yellow', edgecolor='black')
-
-plt.title('Stacked Bar Graph of Age and Churn', fontsize=16)
-plt.xlabel('Age', fontsize=12)
-plt.ylabel('Number of Customers', fontsize=12)
-
-plt.legend()
-
+plt.tight_layout()
 plt.show()
+
