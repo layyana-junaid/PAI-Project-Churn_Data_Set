@@ -1,5 +1,5 @@
 ## Distribution of Age and Churn:
-![image](https://github.com/user-attachments/assets/3dcb8770-0779-4c22-af2c-0102c6e09bce)
+![image](https://github.com/user-attachments/assets/225941c1-edbb-4e34-96ae-cdd7e9ca2d1a)
 
 ## Boxplot of Balance VS Churn:
 ![image](https://github.com/user-attachments/assets/4a649c99-a98c-4352-ae0d-0bf9ec18e26e)
